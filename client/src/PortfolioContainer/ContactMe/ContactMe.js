@@ -72,12 +72,7 @@ export default function ContactMe(props) {
         <div className="col">
           <h2 className="title">
             {" "}
-            <Typed
-              strings={["Get In Touch"]}
-              typeSpeed={50}
-              backSpeed={25}
-              loop
-            />
+            <Typed strings={["Get In Touch"]} typeSpeed={50} backSpeed={25} />
           </h2>
           {/* <a href="#">
             <i className="fa fa-facebook-square"></i>
