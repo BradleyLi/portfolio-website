@@ -1,3 +1,5 @@
 # [START app_yaml]
-runtime: nodejs18
-vm: true
+runtime: nodejs
+env: flex
+runtime_config:
+      runtime_version: 18
