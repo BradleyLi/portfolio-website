@@ -1,6 +1,5 @@
 import React from "react";
-import Typed from "react-typed";
-// import { useTypewriter } from "react-simple-typewriter";
+import Typewriter from "typewriter-effect";
 import "./Profile.css";
 import ScrollService from "../../../utilities/ScrollService";
 
@@ -15,6 +14,7 @@ export default function Profile() {
   //   loop: {},
   //   typeSpeed: 50,
   // });
+
   return (
     <div className="profile-container">
       <div className="profile-parent">
@@ -65,7 +65,7 @@ export default function Profile() {
                   ]}
                 /> */}
                 {/* {typeEffect} */}
-                <Typed
+                {/* <Typed
                   strings={[
                     "Enthusiastic Dev",
                     "Full stack Dev",
@@ -75,6 +75,19 @@ export default function Profile() {
                   typeSpeed={50}
                   backSpeed={25}
                   loop
+                /> */}
+                <Typewriter
+                  options={{
+                    strings: [
+                      "Enthusiastic Dev",
+                      "Full stack Dev",
+                      "Mern stack Dev",
+                      "React/React Native Dev",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    delay: 50,
+                  }}
                 />
               </h1>
               <span className="profile-role-tagline">

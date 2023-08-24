@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Typed from "react-typed";
+import Typewriter from "typewriter-effect";
 import { toast } from "react-toastify";
 
 import imgBack from "../../../src/images/mailz.jpeg";
@@ -72,7 +72,14 @@ export default function ContactMe(props) {
         <div className="col">
           <h2 className="title">
             {" "}
-            <Typed strings={["Get In Touch"]} typeSpeed={50} backSpeed={25} />
+            <Typewriter
+              options={{
+                strings: ["Get In Touch 📧"],
+                autoStart: true,
+                loop: true,
+                delay: 50,
+              }}
+            />
           </h2>
           {/* <a href="#">
             <i className="fa fa-facebook-square"></i>
