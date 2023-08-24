@@ -1,5 +1,6 @@
 import React from "react";
 import Typed from "react-typed";
+import { useTypewriter } from "react-simple-typewriter";
 import "./Profile.css";
 import ScrollService from "../../../utilities/ScrollService";
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useTypewriter } from "react-simple-typewriter";
 import axios from "axios";
+import Typed from "react-typed";
 import { toast } from "react-toastify";
 
 import imgBack from "../../../src/images/mailz.jpeg";
@@ -19,9 +19,9 @@ export default function ContactMe(props) {
 
   ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
-  const [typeEffect] = useTypewriter({
-    words: ["Get In Touch 📧"],
-  });
+  // const [typeEffect] = useTypewriter({
+  //   words: ["Get In Touch 📧"],
+  // });
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -70,7 +70,15 @@ export default function ContactMe(props) {
       <ScreenHeading subHeading={"Let's Keep In Touch"} title={"Contact Me"} />
       <div className="central-form">
         <div className="col">
-          <h2 className="title"> {typeEffect}</h2>
+          <h2 className="title">
+            {" "}
+            <Typed
+              strings={["Get In Touch"]}
+              typeSpeed={50}
+              backSpeed={25}
+              loop
+            />
+          </h2>
           {/* <a href="#">
             <i className="fa fa-facebook-square"></i>
           </a>
