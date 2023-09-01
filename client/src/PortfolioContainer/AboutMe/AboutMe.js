@@ -28,6 +28,7 @@ export default function AboutMe(props) {
         "React and React Native",
         "Building REST API",
         "Database Design and Management",
+        "Foundamental of Machine Learning",
       ],
       heading: "Here are a Few Highlights:",
     },
