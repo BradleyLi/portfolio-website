@@ -66,28 +66,36 @@ const Resume = (props) => {
 
   const projectsDetails = [
     {
-      title: "Personal Portfolio Website",
-      duration: { fromDate: "June 2023", toDate: "August 2023" },
+      title: "Nature Tour Explorer",
+      duration: { fromDate: "July 2023", toDate: "Current" },
       description:
-        "A Personal Portfolio website showcasing personal experience and projects at one place.",
+        "Powered by the Express framework and fortified with robust JWT security mechanisms, our platform empowers users to effortlessly discover and book a wide array of exciting touring options within seconds. Additionally, our integration of Stripe webhooks ensures a seamless and secure payment experience, making the entire process convenient and worry-free.",
       subHeading:
-        "Technologies Used: React JS, Bootstrap, NodeJS, Express, Git/GitHub, Heroku",
+        "Technologies Used: NodeJS, Express, REST API, MongoDB Atlas, Mongoose, JWT, Git/GitHub, Heroku",
     },
     {
-      title: "Meetfood - Social Media && E-commerce platform for food",
-      duration: { fromDate: "September 2022", toDate: "January 2023" },
+      title: "Personal Portfolio Website",
+      duration: { fromDate: "May 2023", toDate: "June 2023" },
       description:
-        "An iOS app designed for users to share experiences and creative content on food using a variety of formats including photos, text, videos.",
+        "Built with React and Express, my personal portfolio website showcases my personal experience and projects at one place.",
       subHeading:
-        "Technologies Used: React Native, TypeScript, NodeJS, ExpressJS, MongoDB, Mongoose, JWT, AWS, Apifox",
+        "Technologies Used: ReactJS, Bootstrap, NodeJS, Express, Git/GitHub, Heroku",
     },
     {
       title: "Course Outline Parser && Deadline Tracker",
       duration: { fromDate: "October 2022", toDate: "April 2023" },
       description:
-        "A course outline Parser that uses gpt-3.5-turbo to parse university course outlines and a deadline tracker to help keep track of the deadlines.",
+        "Powered by gpt-3.5-turbo, Lifeline compiles your deadlines from your course outlines 📄, into calendar reminders ⏰ and a spreadsheet to-do list 📈.",
       subHeading:
-        "Technologies Used: ReactJS, Tailwind CSS, TypeScript, Python, Flask, ChatGPT API, AWS, Git/GitHub",
+        "Technologies Used: ReactJS, Tailwind CSS, TypeScript, Python, Flask, gpt-turbo-3.5 API, AWS, Git/GitHub",
+    },
+    {
+      title: "Expense Tracker",
+      duration: { fromDate: "August 2022", toDate: "October 2023" },
+      description:
+        "Built with ReactJS, this intuitive front-end application aims at simplifying expense tracking for users.",
+      subHeading:
+        "Technologies Used: React, JavaScript, HTML, CSS, AWS S3, Git/GitHub",
     },
   ];
 
@@ -116,32 +124,6 @@ const Resume = (props) => {
           subHeading={"University of Calgary"}
           fromDate={"May 2023"}
           toDate={"July 2023"}
-        />
-        <div className="experience-description">
-          <span className="resume-description-text">
-            - Guided a diverse group of over 20 students in comprehensive,
-            hands-on coding practice sessions twice weekly, fostering a deep
-            understanding different programming paradigms.
-          </span>
-          <br />
-          <span className="resume-description-text">
-            - Collaborated closely with the course instructor in a fast-pacing
-            environment and multitasked to design impactful assignments and exam
-            materials, actively contributing to the ongoing development and
-            improvement of the course.{" "}
-          </span>
-          <br />
-          <span className="resume-description-text">
-            - Utilized strong communication skills to facilitate group
-            discussions and encourage active participation in lectures.
-          </span>
-          <br />
-        </div>
-        <ResumeHeading
-          heading={"Software Engineer Intern"}
-          subHeading={"Joblogic-X Corporation"}
-          fromDate={"September 2022"}
-          toDate={"January 2023"}
         />
         <div className="experience-description">
           <span className="resume-description-text">
