@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import {
-  DiJavascript1,
+  DiJavascript,
+  DiNodejs,
   DiJava,
-  DiCss3Full,
+  DiPython,
+  DiHtml5,
+  DiCss3,
   DiMysql,
   DiPostgresql,
   DiReact,
   DiLinux,
 } from "react-icons/di";
-import { AiOutlineHtml5 } from "react-icons/ai";
-import { FaNodeJs } from "react-icons/fa6";
-import { TbBrandPython } from "react-icons/tb";
 import {
   SiExpress,
   SiAmazonaws,
@@ -105,14 +105,14 @@ const Resume = (props) => {
 
   //here we have
   const languagesDetails = [
-    { skill: "JavaScript", icon: <DiJavascript1 /> },
-    { skill: "NodeJS", icon: <FaNodeJs /> },
+    { skill: "JavaScript", icon: <DiJavascript /> },
+    { skill: "NodeJS", icon: <DiNodejs /> },
     { skill: "Java", icon: <DiJava /> },
-    { skill: "Python", icon: <TbBrandPython /> },
+    { skill: "Python", icon: <DiPython /> },
     { skill: "C", icon: <SiC /> },
     { skill: "C++", icon: <SiCplusplus /> },
-    { skill: "HTML", icon: <AiOutlineHtml5 /> },
-    { skill: "CSS", icon: <DiCss3Full /> },
+    { skill: "HTML", icon: <DiHtml5 /> },
+    { skill: "CSS", icon: <DiCss3 /> },
     { skill: "MySQL", icon: <DiMysql /> },
     { skill: "PosgrelSQL", icon: <DiPostgresql /> },
   ];

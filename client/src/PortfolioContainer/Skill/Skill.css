@@ -6,24 +6,24 @@
   flex-wrap:wrap;
   height: 80px;
   width: 140px;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: #333333;
+  color: var(--white);
   margin: 0 8px 8px 0;
-  border-radius: 10px;
 }
 
-.skill-title:hover {
+.skill-box:hover {
+  transform: scale(1.06);
+  transition: 0.2s ease-out;
+  background-color: #808080;
+}
+
+.skill-title {
   margin-top: 0.5em;
 }
 
 .skill-icon {
   margin-top: -0.2em;
   font-size: 2em;
-  color: black;
-}
-
-.skill-box:hover {
-  background-color: var(--orange);
-  color: white;
 }
 
 @media only screen and (max-width: 1260px) {
