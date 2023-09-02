@@ -33,7 +33,7 @@
 }
 
 .resume-description-text {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .resume-details-carousal {
@@ -68,7 +68,7 @@
 }
 
 .bullet-label {
-  font-size: 18px;
+  font-size: 20px;
   white-space: nowrap;
   font-family: "Poppins SemiBold";
 }
@@ -107,18 +107,40 @@
 .resume-main-heading {
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  font-family: "Poppins SemiBold";
 }
 
 .resume-main-heading span {
   color: var(--dark-orange);
-  font-size: 16px;
-  font-family: "Poppins SemiBold";
+  font-size: 20px;
+  /* font-family: "Poppins SemiBold"; */
 }
 
-.experience-description {
-  max-width: 100%;
+.heading-info {
+  display: flex;
 }
+
+.heading-info button{
+  margin-left: 15px;
+  border-radius: 4px;
+  border: none;
+}
+
+.btn-open {
+  background-color: #cccccc;
+}
+
+.link-icon {
+  margin-left: 5px;
+}
+
+.btn-github {
+  background-color: #24292e;
+  color: var(--white);
+}
+
 
 .heading-bullet {
   position: absolute;
@@ -130,69 +152,82 @@
   background-color: #ff5823;
 }
 
+.heading-date {
+  background-color: #a9a9a9;
+  padding: 4px 12px;
+  font-size: 16px;
+  border-radius: 14px;
+  color: var(--black);
+}
+
+.experience-description {
+  max-width: 100%;
+}
+
 .resume-sub-heading {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Poppins SemiBold";
   color: var(--black);
   margin: 0 0 10px 0;
 }
 
 .resume-heading-description {
-  font-size: 12px;
+  font-size: 14px;
   text-align: justify;
 }
 
-.heading-date {
-  background-color: #ff5823;
-  padding: 4px 12px;
-  font-size: 14px;
-  border-radius: 14px;
-  color: var(--white);
-}
-
-.skill-parent {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 50%;
-}
-
-.programming-skills-container {
+.technical-skills-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
 }
 
-.skill-percentage {
-  position: relative;
-  height: 15px;
-  width: 70%;
-  background-color: #ff5823;
-}
-
-.skill-percentage .active-percentage-bar {
-  height: 15px;
-  transition: 0.8s ease;
-  position: absolute;
-  background-color: #1f2235;
-}
-
-.skill-parent span {
+.technical-skills-section span{
   font-family: "Poppins Bold";
-  font-size: 16px;
+  font-size: 20px;
   color: #ff5823;
 }
 
+.technical-skills-section {
+  margin: 20px 0 25px 0;
+}
+
 /* IPAD PRO RESPONSIVENESS */
-@media only screen and (max-width: 1110px) {
+@media only screen and (max-width: 1260px) {
   .resume-card {
-    width: 880px;
+    width: 900px;
   }
 
   .resume-bullet-details {
     padding: 0 0 0 70px;
+  }
+
+  .resume-main-heading span {
+    color: var(--dark-orange);
+    font-size: 16px;
+    /* font-family: "Poppins SemiBold"; */
+  }
+
+  .heading-date {
+    font-size: 12px;
+  }
+
+  .resume-sub-heading {
+    font-size: 13px;
+    margin: 0 0 6px 0;
+  }
+
+  .resume-heading-description {
+    font-size: 12px;
+  }
+
+  .resume-description-text {
+    font-size: 12px;
+  }
+
+  .technical-skills-section span {
+    font-size: 16px;
   }
 }
 
@@ -212,13 +247,13 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
-    margin: 30px 0;
+    margin: -40px 0;
     align-items: center;
     width: 90%;
   }
 
   .resume-bullet-details {
-    height: 360px;
+    height: 450px;
     padding: 0;
     width: fit-content;
   }
@@ -230,5 +265,40 @@
 
   .selected-bullet {
     width: 100%;
+  }
+
+  .resume-heading {
+    margin-top: -10px;
+    margin-bottom: 0;
+  }
+
+  .resume-main-heading span {
+    color: var(--dark-orange);
+    font-size: 12px;
+    /* font-family: "Poppins SemiBold"; */
+  }
+
+  .heading-date {
+    font-size: 10px;
+  }
+
+  .resume-sub-heading {
+    font-size: 13px;
+    margin: 0 0 6px 0;
+  }
+
+  .resume-heading-description {
+    font-size: 10px;
+  }
+
+  .resume-description-text {
+    font-size: 10px;
+  }
+  
+  .technical-skills-section {
+    margin: 0 0 15px 0;
+  }
+  .technical-skills-section span {
+    font-size: 12px;
   }
 }

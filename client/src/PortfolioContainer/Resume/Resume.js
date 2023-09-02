@@ -1,7 +1,28 @@
 import React, { useState, useEffect } from "react";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import {
+  DiJavascript,
+  DiNodejs,
+  DiJava,
+  DiPython,
+  DiHtml5,
+  DiCss3,
+  DiMysql,
+  DiPostgresql,
+  DiReact,
+  DiLinux,
+} from "react-icons/di";
+import {
+  SiExpress,
+  SiAmazonaws,
+  SiGithub,
+  SiC,
+  SiCplusplus,
+} from "react-icons/si";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
+import Skill from "../Skill/Skill";
 import "./Resume.css";
 
 const Resume = (props) => {
@@ -23,7 +44,38 @@ const Resume = (props) => {
       <div className="resume-heading">
         <div className="resume-main-heading">
           <div className="heading-bullet"></div>
-          <span>{props.heading ? props.heading : ""}</span>
+          <div className="heading-info">
+            <span>{props.heading ? props.heading : ""}</span>
+            {props.projectLink ? (
+              <a
+                href={props.projectLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="btn-open">
+                  Open
+                  <FaExternalLinkAlt className="link-icon" />
+                </button>
+              </a>
+            ) : (
+              <div></div>
+            )}
+
+            {props.gitHubLink ? (
+              <a
+                href={props.gitHubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="btn-github">
+                  GitHub
+                  <FaGithub className="link-icon" />
+                </button>
+              </a>
+            ) : (
+              <div></div>
+            )}
+          </div>
           {props.fromDate && props.toDate ? (
             <div className="heading-date">
               {props.fromDate + "-" + props.toDate}
@@ -46,27 +98,40 @@ const Resume = (props) => {
   const resumeBullets = [
     { label: "Education", logoSrc: "education.svg" },
     { label: "Experience", logoSrc: "experience.svg" },
-    { label: "Programming Skills", logoSrc: "programming-skills.svg" },
+    { label: "Technical Skills", logoSrc: "programming-skills.svg" },
     { label: "Projects", logoSrc: "projects.svg" },
     { label: "Interests", logoSrc: "interests.svg" },
   ];
 
   //here we have
-  const programmingSkillsDetails = [
-    { skill: "JavaScript", ratingPercentage: 85 },
-    { skill: "React JS", ratingPercentage: 85 },
-    { skill: "React Native", ratingPercentage: 80 },
-    { skill: "Express JS", ratingPercentage: 85 },
-    { skill: "Node JS", ratingPercentage: 85 },
-    { skill: "Mongo Db", ratingPercentage: 85 },
-    { skill: "Core Java", ratingPercentage: 80 },
-    { skill: "HTML", ratingPercentage: 80 },
-    { skill: "CSS", ratingPercentage: 80 },
+  const languagesDetails = [
+    { skill: "JavaScript", icon: <DiJavascript /> },
+    { skill: "NodeJS", icon: <DiNodejs /> },
+    { skill: "Java", icon: <DiJava /> },
+    { skill: "Python", icon: <DiPython /> },
+    { skill: "C", icon: <SiC /> },
+    { skill: "C++", icon: <SiCplusplus /> },
+    { skill: "HTML", icon: <DiHtml5 /> },
+    { skill: "CSS", icon: <DiCss3 /> },
+    { skill: "MySQL", icon: <DiMysql /> },
+    { skill: "PosgrelSQL", icon: <DiPostgresql /> },
+  ];
+
+  const frameworksDetails = [
+    { skill: "React", icon: <DiReact /> },
+    { skill: "ExpressJS", icon: <SiExpress /> },
+  ];
+
+  const toolsDetails = [
+    { skill: "AWS", icon: <SiAmazonaws /> },
+    { skill: "Linux", icon: <DiLinux /> },
+    { skill: "Git/GitHub", icon: <SiGithub /> },
   ];
 
   const projectsDetails = [
     {
       title: "Nature Tour Explorer",
+      gitHubLink: "https://github.com/BradleyLi/Nature-Tour-Explorer",
       duration: { fromDate: "July 2023", toDate: "Current" },
       description:
         "Powered by the Express framework and fortified with robust JWT security mechanisms, our platform empowers users to effortlessly discover and book a wide array of exciting touring options within seconds. Additionally, our integration of Stripe webhooks ensures a seamless and secure payment experience, making the entire process convenient and worry-free.",
@@ -75,6 +140,8 @@ const Resume = (props) => {
     },
     {
       title: "Personal Portfolio Website",
+      projectLink: "https://www.bradleyli.dev",
+      gitHubLink: "https://github.com/BradleyLi/portfolio-website",
       duration: { fromDate: "May 2023", toDate: "June 2023" },
       description:
         "Built with React and Express, my personal portfolio website showcases my personal experience and projects at one place.",
@@ -82,15 +149,20 @@ const Resume = (props) => {
         "Technologies Used: ReactJS, Bootstrap, NodeJS, Express, Git/GitHub, Heroku",
     },
     {
-      title: "Course Outline Parser && Deadline Tracker",
+      title: "Course Outline Parser",
+      projectLink: "https://lifeline.techstartucalgary.com/",
+      gitHubLink: "https://github.com/techstartucalgary/lifeline",
       duration: { fromDate: "October 2022", toDate: "April 2023" },
       description:
         "Powered by gpt-3.5-turbo, Lifeline compiles your deadlines from your course outlines 📄, into calendar reminders ⏰ and a spreadsheet to-do list 📈.",
       subHeading:
-        "Technologies Used: ReactJS, Tailwind CSS, TypeScript, Python, Flask, gpt-turbo-3.5 API, AWS, Git/GitHub",
+        "Technologies Used: ReactJS, Tailwind CSS, TypeScript, Python, Flask, Git/GitHub",
     },
     {
       title: "Expense Tracker",
+      projectLink:
+        "http://expense-tracker-bradleyli.s3-website-us-west-2.amazonaws.com/",
+      gitHubLink: "https://github.com/BradleyLi/SmartSpend-ExpenseTracker",
       duration: { fromDate: "August 2022", toDate: "October 2023" },
       description:
         "Built with ReactJS, this intuitive front-end application aims at simplifying expense tracking for users.",
@@ -172,22 +244,37 @@ const Resume = (props) => {
     </div>,
 
     /* PROGRAMMING SKILLS */
-    <div
-      className="resume-screen-container programming-skills-container"
-      key="programming-skills"
-    >
-      {programmingSkillsDetails.map((skill, index) => (
-        <div className="skill-parent" key={index}>
-          <div className="heading-bullet"></div>
-          <span>{skill.skill}</span>
-          <div className="skill-percentage">
-            <div
-              style={{ width: skill.ratingPercentage + "%" }}
-              className="active-percentage-bar"
-            ></div>
-          </div>
+    <div key="programming-skills">
+      <div className="technical-skills-section">
+        <div>
+          <span>Languages:</span>
         </div>
-      ))}
+        <div className="technical-skills-container">
+          {languagesDetails.map((skill, index) => (
+            <Skill title={skill.skill} icon={skill.icon} />
+          ))}
+        </div>
+      </div>
+      <div className="technical-skills-section">
+        <div>
+          <span>Frameworks/Libraries:</span>
+        </div>
+        <div className="technical-skills-container">
+          {frameworksDetails.map((skill, index) => (
+            <Skill title={skill.skill} icon={skill.icon} />
+          ))}
+        </div>
+      </div>
+      <div className="technical-skills-section">
+        <div>
+          <span>Tools:</span>
+        </div>
+        <div className="technical-skills-container">
+          {toolsDetails.map((skill, index) => (
+            <Skill title={skill.skill} icon={skill.icon} />
+          ))}
+        </div>
+      </div>
     </div>,
 
     /* PROJECTS */
@@ -200,6 +287,8 @@ const Resume = (props) => {
           description={projectsDetails.description}
           fromDate={projectsDetails.duration.fromDate}
           toDate={projectsDetails.duration.toDate}
+          projectLink={projectsDetails.projectLink}
+          gitHubLink={projectsDetails.gitHubLink}
         />
       ))}
     </div>,
