@@ -15,7 +15,7 @@ export default function AboutMe(props) {
   const SCREEN_CONSTSANTS = {
     description:
       // eslint-disable-next-line
-      "An incoming fourth year student passionate about coding \
+      "An fourth year student passionate about coding \
       and solving problems using technology. Currently pursuing \
       a Bachelor of Science degree in Computer Science at University \
       of Calgary. Strong knowledge of the computer science \

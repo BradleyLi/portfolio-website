@@ -130,23 +130,28 @@ const Resume = (props) => {
 
   const projectsDetails = [
     {
-      title: "Nature Tour Explorer",
-      gitHubLink: "https://github.com/BradleyLi/Nature-Tour-Explorer",
-      duration: { fromDate: "July 2023", toDate: "Current" },
+      title: "StudyHub - Chatroom App",
+      projectLink: "https://uofc-study-hub.vercel.app/",
+      gitHubLink: "https://github.com/zhifanl/UofC-Study-Hub",
+      duration: { fromDate: "September 2023", toDate: "December 2023" },
       description:
-        "Powered by the Express framework and fortified with robust JWT security mechanisms, our platform empowers users to effortlessly discover and book a wide array of exciting touring options within seconds. Additionally, our integration of Stripe webhooks ensures a seamless and secure payment experience, making the entire process convenient and worry-free.",
+        // eslint-disable-next-line no-multi-str
+        "Developed a real-time, multi-user chat application; utilized Socket.io for live messaging, integrated a Node.js backend with \
+        Express for robust service handling, and utilized MongoDB for efficient data storage; developed UI prototypes using Figma.",
       subHeading:
-        "Technologies Used: NodeJS, Express, REST API, MongoDB Atlas, Mongoose, JWT, Git/GitHub, Heroku",
+        "React.js, Figma, Express, REST API, Postman, MongoDB Atlas, Mongoose, JWT, Git/GitHub, AWS",
     },
     {
-      title: "Personal Portfolio Website",
-      projectLink: "https://www.bradleyli.dev",
-      gitHubLink: "https://github.com/BradleyLi/portfolio-website",
-      duration: { fromDate: "May 2023", toDate: "June 2023" },
+      title: "MeetFood – Short Video Platform",
+      projectLink:
+        "https://apps.apple.com/ca/app/meetfood-explore-reviews/id1603020687",
+      duration: { fromDate: "May 2023", toDate: "August 2023" },
       description:
-        "Built with React and Express, my personal portfolio website showcases my personal experience and projects at one place.",
+        // eslint-disable-next-line no-multi-str
+        "Collaborated with cross-functional teams to develop and integrate user and video RESTful APIs, crafted responsive UI\
+        components, and contributed to the full-stack development and deployment of the application.",
       subHeading:
-        "Technologies Used: ReactJS, Bootstrap, NodeJS, Express, Git/GitHub, Heroku",
+        "Technologies Used: React Native, Typescript, Express, MongoDB, Mongoose, JWT, AWS S3, Elastic Beanstalk, Cognito",
     },
     {
       title: "Course Outline Parser",
@@ -157,17 +162,6 @@ const Resume = (props) => {
         "Powered by gpt-3.5-turbo, Lifeline compiles your deadlines from your course outlines 📄, into calendar reminders ⏰ and a spreadsheet to-do list 📈.",
       subHeading:
         "Technologies Used: ReactJS, Tailwind CSS, TypeScript, Python, Flask, Git/GitHub",
-    },
-    {
-      title: "Expense Tracker",
-      projectLink:
-        "http://expense-tracker-bradleyli.s3-website-us-west-2.amazonaws.com/",
-      gitHubLink: "https://github.com/BradleyLi/SmartSpend-ExpenseTracker",
-      duration: { fromDate: "August 2022", toDate: "October 2023" },
-      description:
-        "Built with ReactJS, this intuitive front-end application aims at simplifying expense tracking for users.",
-      subHeading:
-        "Technologies Used: React, JavaScript, HTML, CSS, AWS S3, Git/GitHub",
     },
   ];
 
@@ -192,51 +186,51 @@ const Resume = (props) => {
     <div className="resume-screen-container" key="work-experience">
       <div className="experience-container">
         <ResumeHeading
-          heading={"Computer Science Teaching Assistant"}
-          subHeading={"University of Calgary"}
-          fromDate={"May 2023"}
-          toDate={"July 2023"}
+          heading={"Mobile Application Developer Intern"}
+          subHeading={"Knapsack-X"}
+          fromDate={"January 2024"}
+          toDate={"Current"}
         />
         <div className="experience-description">
           <span className="resume-description-text">
-            - Guided a diverse group of over 20 students in comprehensive,
-            hands-on coding practice sessions twice weekly, fostering a deep
-            understanding different programming paradigms.
+            - Design and develop mobile applications for
+            [iOS/Android/cross-platform] using React Native and other relevant
+            technologies.
           </span>
           <br />
           <span className="resume-description-text">
-            - Collaborated closely with the course instructor in a fast-pacing
-            environment and multitasked to design impactful assignments and exam
-            materials, actively contributing to the ongoing development and
-            improvement of the course.{" "}
+            - Engage in various stages of the mobile gaming app development
+            lifecycle, from requirement analysis and design to implementation,
+            testing, and deployment.{" "}
           </span>
           <br />
           <span className="resume-description-text">
-            - Utilized strong communication skills to facilitate group
-            discussions and encourage active participation in lectures.
+            - Enhance the codebase, implement features, and fix bugs while
+            adhering to coding standards and best practices. - Ensure new
+            features align with design specifications, conducting comprehensive
+            testing to ensure functionality and performance in mobile gaming
+            experiences.
           </span>
           <br />
         </div>
         <ResumeHeading
-          heading={"Frontend Developer"}
-          subHeading={"Tech Start UCalgary"}
-          fromDate={"October 2022"}
-          toDate={"April 2023"}
+          heading={"Full Stack Developer Intern"}
+          subHeading={"Joblogic-X Corporation"}
+          fromDate={"May 2023"}
+          toDate={"August 2023"}
         />
         <div className="experience-description">
           <span className="resume-description-text">
-            - Collaborated with a team of seven people using Agile methodology
-            to develop a full-stack deadline-managing application.
+            - Developed a short-video mobile app called MeetFood by effectively
+            working with other developers, designers, and architects to
+            implement UX/UI, frontend & backend functionalities, document user
+            requirements and troubleshoot issues.
           </span>
           <br />
           <span className="resume-description-text">
-            - Contributed primarily to the front-end development and worked
-            closely with teammates in design, code reviews and testing.{" "}
-          </span>
-          <br />
-          <span className="resume-description-text">
-            - Communicated clearly and effective with all members of the team
-            and ensured the production of high-quality code.
+            - Implemented user and video RESTful APIs, developed prototypes and
+            user interface components, and aided in the application's deployment
+            on AWS to achieve a resilient and scalable deployment.
           </span>
           <br />
         </div>
