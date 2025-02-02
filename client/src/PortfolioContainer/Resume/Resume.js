@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import {
-  DiJavascript1,
+  DiNodejs,
+  DiPython,
+  DiSwift,
   DiJava,
-  DiCss3Full,
-  DiMysql,
-  DiPostgresql,
   DiReact,
-  DiLinux,
 } from "react-icons/di";
-import { AiOutlineHtml5 } from "react-icons/ai";
-import { FaNodeJs } from "react-icons/fa6";
-import { TbBrandPython } from "react-icons/tb";
+import { SiTypescript, SiJavascript, SiJest } from "react-icons/si";
 import {
   SiExpress,
   SiAmazonaws,
-  SiGithub,
+  SiDocker,
+  SiKubernetes,
   SiC,
   SiCplusplus,
+  SiApachekafka,
 } from "react-icons/si";
+import { VscAzure } from "react-icons/vsc";
+import { GrGraphQl } from "react-icons/gr";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
@@ -105,27 +105,29 @@ const Resume = (props) => {
 
   //here we have
   const languagesDetails = [
-    { skill: "JavaScript", icon: <DiJavascript1 /> },
-    { skill: "NodeJS", icon: <FaNodeJs /> },
+    { skill: "TypeScript", icon: <SiTypescript /> },
+    { skill: "JavaScript", icon: <SiJavascript /> },
+    { skill: "NodeJS", icon: <DiNodejs /> },
+    { skill: "Python", icon: <DiPython /> },
+    { skill: "Swift", icon: <DiSwift /> },
     { skill: "Java", icon: <DiJava /> },
-    { skill: "Python", icon: <TbBrandPython /> },
     { skill: "C", icon: <SiC /> },
     { skill: "C++", icon: <SiCplusplus /> },
-    { skill: "HTML", icon: <AiOutlineHtml5 /> },
-    { skill: "CSS", icon: <DiCss3Full /> },
-    { skill: "MySQL", icon: <DiMysql /> },
-    { skill: "PosgrelSQL", icon: <DiPostgresql /> },
   ];
 
   const frameworksDetails = [
-    { skill: "React", icon: <DiReact /> },
+    { skill: "ReactJS", icon: <DiReact /> },
     { skill: "ExpressJS", icon: <SiExpress /> },
+    { skill: "Jest", icon: <SiJest /> },
+    { skill: "GraphQL", icon: <GrGraphQl /> },
   ];
 
   const toolsDetails = [
+    { skill: "Azure", icon: <VscAzure /> },
     { skill: "AWS", icon: <SiAmazonaws /> },
-    { skill: "Linux", icon: <DiLinux /> },
-    { skill: "Git/GitHub", icon: <SiGithub /> },
+    { skill: "Docker", icon: <SiDocker /> },
+    { skill: "Kubernetes", icon: <SiKubernetes /> },
+    { skill: "Apache Kafka", icon: <SiApachekafka /> },
   ];
 
   const projectsDetails = [
@@ -169,7 +171,7 @@ const Resume = (props) => {
     <div className="resume-screen-container" key="education">
       <ResumeHeading
         heading={"University of Calgary, AB, Canada"}
-        subHeading={"Bachelor of Science, Computer of Science"}
+        subHeading={"Bachelor of Science, Major in Computer of Science"}
         fromDate={"09/2020"}
         toDate={"Current"}
       />
@@ -186,53 +188,56 @@ const Resume = (props) => {
     <div className="resume-screen-container" key="work-experience">
       <div className="experience-container">
         <ResumeHeading
-          heading={"Mobile Application Developer Intern"}
-          subHeading={"Knapsack-X"}
-          fromDate={"January 2024"}
+          heading={"Full Stack Engineer Intern"}
+          subHeading={"Alberta Energy Regulator"}
+          fromDate={"Semtember 2024"}
           toDate={"Current"}
         />
         <div className="experience-description">
           <span className="resume-description-text">
-            - Design and develop mobile applications for
-            [iOS/Android/cross-platform] using React Native and other relevant
-            technologies.
+            - Worked closely with senior engineers to engineer and deploy
+            scalable microservices architecture for OneStop2.0 platform,
+            contributing to system modernization initiatives.
           </span>
-          <br />
-          <span className="resume-description-text">
-            - Engage in various stages of the mobile gaming app development
-            lifecycle, from requirement analysis and design to implementation,
-            testing, and deployment.{" "}
-          </span>
-          <br />
-          <span className="resume-description-text">
-            - Enhance the codebase, implement features, and fix bugs while
-            adhering to coding standards and best practices. - Ensure new
-            features align with design specifications, conducting comprehensive
-            testing to ensure functionality and performance in mobile gaming
-            experiences.
-          </span>
-          <br />
         </div>
         <ResumeHeading
-          heading={"Full Stack Developer Intern"}
-          subHeading={"Joblogic-X Corporation"}
-          fromDate={"May 2023"}
-          toDate={"August 2023"}
+          heading={"Software Engineer in Test Intern"}
+          subHeading={"Alberta Energy Regulator"}
+          fromDate={"May 2024"}
+          toDate={"August 2024"}
         />
         <div className="experience-description">
           <span className="resume-description-text">
-            - Developed a short-video mobile app called MeetFood by effectively
-            working with other developers, designers, and architects to
-            implement UX/UI, frontend & backend functionalities, document user
-            requirements and troubleshoot issues.
+            - Developed and refactored 100+ automated functional and API test
+            cases using Playwright while performing manual regression testing
+            within each sprint before each UAT and prod release, identifying and
+            reporting 30+ defects.
           </span>
-          <br />
+        </div>
+        <ResumeHeading
+          heading={"Mobile Application Developer Intern"}
+          subHeading={"Knapsack-X"}
+          fromDate={"January 2024"}
+          toDate={"April 2024"}
+        />
+        <div className="experience-description">
           <span className="resume-description-text">
-            - Implemented user and video RESTful APIs, developed prototypes and
-            user interface components, and aided in the application's deployment
-            on AWS to achieve a resilient and scalable deployment.
+            - Designed and implemented scalable mobile solutions, integrating
+            Firebase for data synchronization and user authentication.
           </span>
-          <br />
+        </div>
+        <ResumeHeading
+          heading={"Computer Science Teaching Assistant"}
+          subHeading={"University of Calgary"}
+          fromDate={"May 2023"}
+          toDate={"June 2023"}
+        />
+        <div className="experience-description">
+          <span className="resume-description-text">
+            - Directed bi-weekly coding sessions for 20+ students, achieving
+            100% assignment completion rate through interactive problem-solving
+            and targeted code reviews
+          </span>
         </div>
       </div>
     </div>,

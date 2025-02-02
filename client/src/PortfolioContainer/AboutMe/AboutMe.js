@@ -15,20 +15,22 @@ export default function AboutMe(props) {
   const SCREEN_CONSTSANTS = {
     description:
       // eslint-disable-next-line
-      "An fourth year student passionate about coding \
-      and solving problems using technology. Currently pursuing \
-      a Bachelor of Science degree in Computer Science at University \
-      of Calgary. Strong knowledge of the computer science \
-      fundamentals. Full stack web and mobile developer with background \
-      knowledge of MERN stacks, willing to be an asset for an organization.",
+      "As a fifth-year Computer Science student at the University of Calgary approaching graduation, \
+      I bring deep passion for leveraging cutting-edge technologies to architect and implement scalable \
+      solutions for complex real-world challenges. My ability to thrive in dynamic, high-pressure \
+      environments has consistently pushed me beyond my comfort zone, enabling continuous growth \
+      and innovation. With a strong foundation in computer science fundamentals and hands-on experience \
+      in both full-stack web and mobile development, I combine theoretical knowledge with practical expertise \
+      to deliver impactful solutions. My drive for technical excellence and adaptability positions me as a \
+      valuable contributor ready to make meaningful impact in any organization.",
     highlights: {
       bullets: [
         "Full Stack Web and Mobile Development",
-        "Responsive Design",
-        "React and React Native",
-        "Building REST API",
-        "Database Design and Management",
-        "Foundamental Understanding of Machine Learning",
+        "Building REST & GraphQL API",
+        "Cloud Technology and Infrastructure (Azure, AWS)",
+        "Testing and Quality Assurance (Playwright, Jest)",
+        "Agile Development Practices",
+        "System Architecture and Optimization",
       ],
       heading: "Here are a Few Highlights:",
     },
